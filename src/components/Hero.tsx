@@ -5,13 +5,13 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Hi, I'm Your Name
+              Hi, I'm Silas James
             </h1>
             <p className="text-xl text-gray-700 mb-4">
-              A passionate full-stack developer building beautiful and functional web experiences.
+              A motivated Computer Science student passionate about web development and graphics design.
             </p>
             <p className="text-lg text-gray-600 mb-8">
-              I specialize in creating responsive web applications with modern technologies like React, Next.js, and TypeScript.
+              I create beautiful digital experiences through web development and graphic design. Specializing in Python, React, Next.js, and CorelDraw design.
             </p>
             <div className="flex gap-4">
               <a

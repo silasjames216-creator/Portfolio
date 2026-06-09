@@ -2,24 +2,35 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration and inventory management.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      title: 'Stephen Classic',
+      description: 'Professional logo design showcasing elegant typography and modern branding.',
+      tech: ['CorelDraw', 'Branding', 'Logo Design'],
       link: '#',
+      image: '/stephen-classic.png',
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task manager with real-time updates and team collaboration features.',
-      tech: ['Next.js', 'TypeScript', 'Prisma', 'Socket.io'],
+      title: 'Corestone Construction',
+      description: 'Construction company branding with professional logo design and tagline.',
+      tech: ['CorelDraw', 'Logo Design', 'Branding'],
       link: '#',
+      image: '/corestone.png',
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'Interactive weather app with location search and detailed forecasts.',
-      tech: ['React', 'Tailwind CSS', 'OpenWeather API'],
+      title: 'Lamsy Beauty Empire',
+      description: 'Beauty service portfolio design featuring makeup, hair styling, and fashion services.',
+      tech: ['CorelDraw', 'Portfolio Design', 'Graphics Design'],
       link: '#',
+      image: '/lamsy-beauty.png',
+    },
+    {
+      id: 4,
+      title: 'ACF March Campaign',
+      description: 'Event promotion design for Association of Christian Students with inspirational messaging.',
+      tech: ['CorelDraw', 'Event Design', 'Social Media'],
+      link: '#',
+      image: '/acf-march.png',
     },
   ];
 
@@ -27,22 +38,24 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Featured Projects</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="bg-gradient-to-r from-blue-500 to-indigo-600 h-40"></div>
+              <div className="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
+                {project.image ? `[${project.title}]` : 'Design Preview'}
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                    <span key={tech} className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
                       {tech}
                     </span>
                   ))}
                 </div>
                 <a href={project.link} className="text-blue-600 hover:text-blue-800 font-medium">
-                  Learn More →
+                  View Design →
                 </a>
               </div>
             </div>

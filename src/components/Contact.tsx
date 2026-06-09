@@ -40,14 +40,29 @@ export default function Contact() {
             <div className="space-y-4">
               <div>
                 <h4 className="font-bold text-gray-900">Email</h4>
-                <p className="text-gray-600">your.email@example.com</p>
+                <p className="text-gray-600">
+                  <a href="mailto:Silasjames216@gmail.com" className="text-blue-600 hover:text-blue-800">
+                    Silasjames216@gmail.com
+                  </a>
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900">Phone</h4>
+                <p className="text-gray-600">
+                  <a href="tel:08100126860" className="text-blue-600 hover:text-blue-800">
+                    08100126860
+                  </a>
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900">Location</h4>
+                <p className="text-gray-600">Adamawa, Yola Nigeria</p>
               </div>
               <div>
                 <h4 className="font-bold text-gray-900">Social Media</h4>
                 <div className="flex gap-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800">LinkedIn</a>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">GitHub</a>
-                  <a href="#" className="text-blue-600 hover:text-blue-800">Twitter</a>
+                  <a href="https://linkedin.com/in/silasjames216" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">LinkedIn</a>
+                  <a href="https://github.com/silasjames216-creator" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">GitHub</a>
                 </div>
               </div>
             </div>
