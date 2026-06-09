@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section id="about" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -28,11 +30,14 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="bg-blue-200 rounded-lg aspect-square flex items-center justify-center overflow-hidden">
-            <img
+          <div className="bg-blue-200 rounded-lg aspect-square flex items-center justify-center overflow-hidden relative">
+            <Image
               src="/profile.jpg"
               alt="Silas James"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              quality={80}
             />
           </div>
         </div>

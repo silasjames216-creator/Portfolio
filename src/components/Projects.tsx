@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import ImageModal from './ImageModal';
 
 export default function Projects() {
@@ -49,12 +50,17 @@ export default function Projects() {
             <div key={project.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
               <button
                 onClick={() => setSelectedImage(project.image)}
-                className="w-full cursor-pointer hover:opacity-80 transition"
+                className="w-full cursor-pointer hover:opacity-80 transition relative overflow-hidden bg-gray-200"
+                style={{ paddingBottom: '100%' }}
               >
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  loading="lazy"
+                  quality={75}
                 />
               </button>
               <div className="p-6">
