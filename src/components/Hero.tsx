@@ -28,8 +28,12 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="bg-blue-200 rounded-lg aspect-square flex items-center justify-center">
-            <div className="text-6xl">👨‍💻</div>
+          <div className="bg-blue-200 rounded-lg aspect-square flex items-center justify-center overflow-hidden">
+            <img
+              src="/profile.jpg"
+              alt="Silas James"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>

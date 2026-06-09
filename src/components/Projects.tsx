@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+import ImageModal from './ImageModal';
+
 export default function Projects() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const projects = [
     {
       id: 1,
@@ -41,9 +47,16 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="bg-gray-300 h-48 flex items-center justify-center text-gray-500">
-                {project.image ? `[${project.title}]` : 'Design Preview'}
-              </div>
+              <button
+                onClick={() => setSelectedImage(project.image)}
+                className="w-full cursor-pointer hover:opacity-80 transition"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+              </button>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
@@ -54,13 +67,23 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <a href={project.link} className="text-blue-600 hover:text-blue-800 font-medium">
-                  View Design →
-                </a>
+                <button
+                  onClick={() => setSelectedImage(project.image)}
+                  className="text-blue-600 hover:text-blue-800 font-medium cursor-pointer"
+                >
+                  View Full Size →
+                </button>
               </div>
             </div>
           ))}
         </div>
+
+        <ImageModal
+          isOpen={!!selectedImage}
+          imageSrc={selectedImage || ''}
+          imageAlt="Design Project"
+          onClose={() => setSelectedImage(null)}
+        />
       </div>
     </section>
   );
